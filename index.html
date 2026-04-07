@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Evil Wisdom</title><meta name="author" content="EvilWisdom2025"><meta name="copyright" content="EvilWisdom2025"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Evil Wisdom">
+<meta property="og:url" content="https://evilwisdom2025.github.io/index.html">
+<meta property="og:site_name" content="Evil Wisdom">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://evilwisdom2025.github.io/img/avatar.png">
+<meta property="article:author" content="EvilWisdom2025">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://evilwisdom2025.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/avatar.png"><link rel="canonical" href="https://evilwisdom2025.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Evil Wisdom',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">245</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Evil Wisdom</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Evil Wisdom</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/03/06/%E6%A0%B8%E6%AD%A6%E5%99%A8%E3%80%81%E6%88%98%E4%BA%89%E5%86%B3%E7%AD%96%E4%B8%8E%E5%9B%BD%E9%99%85%E7%A7%A9%E5%BA%8F%EF%BC%9A%E4%BB%8E%E5%8E%86%E5%8F%B2%E6%A1%88%E4%BE%8B%E5%88%B0%E7%8E%B0%E5%AE%9E%E6%A0%BC%E5%B1%80%E7%9A%84%E5%88%86%E6%9E%90/" title="核武器、战争决策与国际秩序：从历史案例到现实格局的分析">核武器、战争决策与国际秩序：从历史案例到现实格局的分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-03-06T09:53:48.000Z" title="Created 2026-03-06 17:53:48">2026-03-06</time></span></div><div class="content">一、问题背景在国际政治讨论中，经常会出现以下疑问：  为什么一些国家发展核武器时会遭到军事威胁甚至打击，而另一些国家却没有？ 当年中国发展核武器时，美国和苏联为什么没有阻止？ 为什么美国没有在核发展早期就军事打击朝鲜？ 为什么美国对伊朗核计划态度强硬，却长期没有对朝鲜采取军事行动？  这些问题看似矛盾，实际上涉及战争成本、地缘政治、军事地理、核扩散体系以及大国战略平衡等多个因素。本文将通过中国、朝鲜、伊朗三个案例，逐一加以分析。  二、历史先例：中国发展核武器时的国际反应理解朝鲜和伊朗问题，需要先了解中国获得核武器的历史背景——这一案例奠定了此后大国对待核扩散问题的基本逻辑。 1. 苏联的援助与撤出1950年代，苏联曾向中国提供核技术援助。然而随着中苏关系恶化，苏联于1960年代初撤回专家、终止合作，中国此后依靠自身力量继续推进核计划。 2. 美国曾考虑军事打击1960年代，美国曾研究是否空袭中国位于罗布泊的核试验基地，但最终没有实施。主要原因包括：  打击核设施难以彻底摧毁，且存在战争升级风险 彼时美国深陷越南战争，无力开辟新战场 大国冲突升级的代价难以承受  3....</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/03/02/%E6%88%98%E4%BA%89%E3%80%81%E5%8F%8C%E6%A0%87%E4%B8%8E%E5%88%B6%E5%BA%A6%E8%BD%AC%E5%9E%8B%EF%BC%9A%E4%B8%80%E7%A7%8D%E7%BB%93%E6%9E%84%E6%80%A7%E5%88%86%E6%9E%90/" title="战争、双标与制度转型：一种结构性分析">战争、双标与制度转型：一种结构性分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-03-02T06:04:10.000Z" title="Created 2026-03-02 14:04:10">2026-03-02</time></span></div><div class="content">在国际政治讨论中，情绪往往先于逻辑。但如果抽离立场，从结构与概率出发，可以看到几个更清晰的规律。 本文围绕三个问题展开：大国是否存在“双重标准”？战争是否能够带来制度转型？像朝鲜这样的高度威权国家，转型路径何在？  一、大国外交中的“价值”与“利益”讨论“双标”，首先需要界定标准。 若以话语一致性为标准——即对所有跨境军事行动使用一致的法律与道义语言——则中国在俄乌战争中未直接使用“侵略”定性俄罗斯，在联合国相关决议中多次弃权；而在美以攻击伊朗问题上，则明确援引主权与国际法框架予以谴责。两者定性强度存在明显差异，“双标”的判断成立。 若以国家利益为标准——即外交政策首先服务于战略安全与长期利益——则这种差异属于大国常态，几乎所有大国都会在不同议题上选择性强调原则，并无例外。 因此，“是否双标”本质上是一个标准选择问题：道义一致性标准与现实主义利益标准，会得出截然不同的结论。  二、战争是否能带来制度转型？战争既是灾难也是机会——这一判断有历史依据，但需要拆解。 成功案例存在，但条件极端苛刻。...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/02/25/%E5%BD%93%E9%87%91%E7%89%8C%E6%88%90%E4%B8%BA%E9%81%AE%E7%BE%9E%E5%B8%83%EF%BC%9A%E5%AE%8F%E5%A4%A7%E5%8F%99%E4%BA%8B%E3%80%81%E6%B3%95%E5%BE%8B%E5%A4%B1%E8%AF%AD%E4%B8%8E%E5%88%B6%E5%BA%A6%E7%9A%84%E5%8F%8C%E9%87%8D%E6%A0%87%E5%87%86/" title="当金牌成为遮羞布：宏大叙事、法律失语与制度的双重标准">当金牌成为遮羞布：宏大叙事、法律失语与制度的双重标准</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-02-25T11:00:19.000Z" title="Created 2026-02-25 19:00:19">2026-02-25</time></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/02/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%96%E7%95%8C%E6%9C%89%E6%9D%83%E8%AE%A8%E8%AE%BA%E4%BD%A0/" title="为什么世界有权讨论你">为什么世界有权讨论你</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-02-04T11:17:53.000Z" title="Created 2026-02-04 19:17:53">2026-02-04</time></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/02/04/%E4%BB%8E%E2%80%9C%E6%81%90%E6%80%96%E5%88%86%E5%AD%90%E2%80%9D%E5%88%B0%E2%80%9C%E5%BA%A7%E4%B8%8A%E5%AE%BE%E2%80%9D%EF%BC%9A%E5%8F%99%E5%88%A9%E4%BA%9A%E5%A4%8F%E6%8B%89%E8%A2%AB%E2%80%9C%E6%B4%97%E7%99%BD%E2%80%9D%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/" title="从“恐怖分子”到“座上宾”：叙利亚夏拉被“洗白”的政治逻辑">从“恐怖分子”到“座上宾”：叙利亚夏拉被“洗白”的政治逻辑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-02-04T10:58:38.000Z" title="Created 2026-02-04 18:58:38">2026-02-04</time></span></div><div class="content">围绕叙利亚现任过渡权力核心人物艾哈迈德·夏拉（Ahmed...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/02/04/%E9%BB%98%E9%BB%98%E6%90%9E%E7%A0%B4%E5%9D%8F%EF%BC%9A%E5%BC%B1%E8%80%85%E6%94%BF%E6%B2%BB%E4%B8%AD%E7%9A%84%E2%80%9C%E9%9A%90%E6%80%A7%E5%8F%8D%E6%8A%97%E2%80%9D/" title="默默搞破坏：弱者政治中的“隐性反抗”">默默搞破坏：弱者政治中的“隐性反抗”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-02-04T10:49:09.000Z" title="Created 2026-02-04 18:49:09">2026-02-04</time></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/22/%E5%8F%8D%E6%8A%97%E5%8A%A0%E7%8F%AD%E7%BD%91%E7%BA%A2%EF%BC%9A%E4%B8%80%E6%9D%A1%E6%96%B0%E8%B5%9B%E9%81%93%EF%BC%8C%E8%BF%98%E6%98%AF%E6%83%85%E7%BB%AA%E7%BB%8F%E6%B5%8E%E7%9A%84%E6%94%B6%E7%BC%96%EF%BC%9F/" title="反抗加班网红：一条新赛道，还是情绪经济的收编？">反抗加班网红：一条新赛道，还是情绪经济的收编？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-01-22T04:26:44.000Z" title="Created 2026-01-22 12:26:44">2026-01-22</time></span></div><div class="content">1. 现象：反抗被内容化了近年出现一类固定内容：拒绝加班、曝光PUA、整顿职场、辞职仲裁。这类账号的共同点是把职场矛盾转化为可传播的叙事：冲突明确、立场清晰、情绪强烈、结局“爽”。 它看似是劳动者的觉醒，实则是一个更典型的平台现象：当反抗以内容形式出现，它首先进入的是流量逻辑，而非制度逻辑。  2. 新赛道：反内卷为何适合爆发反加班能快速成为“赛道”，原因主要有四点：  受众广：加班与压榨体验具有普遍性 门槛低：无需专业知识，只要讲经历即可成立 情绪强：愤怒、屈辱、报复感天然驱动互动 结构爽：短视频适配“冲突—反击—反转”的叙事模板  因此，劳动议题被迅速“产品化”：痛苦不再只是现实，而成为稳定的内容供给。  3. 全民反抗：更多是象征性参与线上确实形成了“全民反抗”的观感，但多数行为属于象征性反抗：转发、评论、共情、发泄，成本低且即时反馈强。 这种参与有心理意义，但对现实结构的影响有限，因为关键约束并未改变：反抗成本仍由个体承担，而收益主要停留在情绪层面。  4....</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/20/AI-%E6%8A%80%E6%9C%AF%E5%8F%98%E9%9D%A9%E3%80%81%E7%BF%BB%E5%A2%99%E6%89%A9%E6%95%A3%E4%B8%8E%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E7%9A%84%E2%80%9C%E4%BD%8E%E7%83%88%E5%BA%A6%E8%A7%89%E9%86%92%E2%80%9D/" title="AI 技术变革、翻墙扩散与中国社会的“低烈度觉醒”">AI 技术变革、翻墙扩散与中国社会的“低烈度觉醒”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-01-20T02:44:35.000Z" title="Created 2026-01-20 10:44:35">2026-01-20</time></span></div><div class="content">一、问题的提出：AI 为什么正在“逼迫”人们翻墙？近年来，一个非常现实却不太被正面讨论的现象正在出现：随着 AI 技术和数字生产工具的快速发展，越来越多中国用户被动地走向翻墙。 原因并不复杂，也并非意识形态冲动，而是技术结构变化带来的现实约束：  大量核心 AI 服务、模型、文档、API、算力平台 直接屏蔽中国 IP 海外技术生态（GitHub、论文、社区、工具链）与国内版本 明显割裂 合规与监管成本使国际公司倾向于 整体回避中国市场  在这种背景下，对学生、程序员、研究人员、创业者而言，不翻墙几乎等同于主动放弃技术竞争力。 于是，翻墙不再是“政治行为”，而逐渐演化为一种职业技能、技术手段和生存策略。  二、中国社会的“内卷动力”如何放大这一趋势？AI 并不是唯一变量，真正放大翻墙规模的，是中国社会本身的结构性压力。 在高度竞争、低容错的环境中：  技术更新 ≈ 职业淘汰 信息落后 ≈ 阶层下滑 停滞 ≈...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/30/%E7%AB%9E%E4%BA%89%E6%80%A7%E9%80%89%E4%B8%BE%E4%B8%8E%E7%A1%AE%E8%AE%A4%E6%80%A7%E9%80%89%E4%B8%BE%EF%BC%9A%E5%88%B6%E5%BA%A6%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A0%B9%E6%9C%AC%E5%B7%AE%E5%BC%82/" title="竞争性选举与确认性选举：制度功能的根本差异">竞争性选举与确认性选举：制度功能的根本差异</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-12-30T05:38:09.000Z" title="Created 2025-12-30 13:38:09">2025-12-30</time></span></div><div class="content">核心问题区分选举类型的关键不是”能否改变结果”，而是：选举在何时、以何种方式行使筛选功能？  一、两种选举的制度逻辑竞争性选举 筛选时机：投票阶段 筛选方式：多候选人竞争，选民直接选择 制度目标：让权力归属取决于投票结果 不确定性：谁当选是开放性问题  确认性选举 筛选时机：提名阶段 筛选方式：提名机制预先确定人选 制度目标：为既定人选提供程序正当性 不确定性：是否通过是例外性问题  关键区别：权力竞争发生在哪个环节。  二、”改变结果”的不同含义竞争性选举中的”改变” 常态机制：候选人A在竞争中输给候选人B 触发条件：选民偏好、竞选表现、政策争议 频率：每次选举都可能发生 本质：权力在不同政治力量间转移  确认性选举中的”改变” 例外机制：提名人选未获通过，重新提名 触发条件：重大丑闻、程序瑕疵、极端反对 频率：罕见 本质：权力仍在同一提名权结构内调整   三、候选人门槛的不同性质1. 门槛在制度中的位置竞争性选举： 1提名门槛 → [竞争空间] → 投票筛选 → 当选 门槛是入场券，通过后仍需竞争 确认性选举： 1提名筛选 ≈ 实质决定 → 投票确认 →...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/08/%E5%A4%9C%E5%B9%95%E4%B8%8B%E7%9A%84%E5%A4%B1%E6%9C%9B-%E2%80%94%E2%80%94-%E5%BD%93%E4%BB%8A%E4%B8%96%E7%95%8C%E4%B8%BA%E4%BD%95%E6%97%A5%E7%9B%8A%E9%98%B4%E9%83%81/" title="夜幕下的失望 —— 当今世界为何日益阴郁">夜幕下的失望 —— 当今世界为何日益阴郁</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-12-08T03:26:24.000Z" title="Created 2025-12-08 11:26:24">2025-12-08</time></span></div><div class="content">在最近几年里，我越来越感到：原本应该属于理性、务实、讲究真实与对话的现代社会，正被一种无形的“政治阴云”所笼罩。表面上，我们仍生活在“制度”、“法律”、“民主”、“自由”的世界里，但现实中，越来越多国家和地区的政治运作，已渐渐失去了它们应有的诚实与透明。面对这一切，我感到深深的失望。 中国长期以来的政治结构就是一个典型：它所谓的“全过程民主”，在本质上仍是一个高度集中的权力体系，人民被要求服从，哪怕无数声音在基层被压制、淹没，也无人知晓；一切都在“既定轨道”里运转。 而当我们把目光投向曾经被视为“自由都市”的地区——譬如曾经拥有选举制度、自以为公正的 香港 ——在经历了变化后，连那残留的形式也正在消失。所谓特首选举，从“多名候选人竞选”变成了“从一个候选人里选”——政治变成了一场独角戏；所谓的大规模法律与制度变动，也在让普通市民街头无从发声。再普通不过的民主机制，看似被保留，实则已被架空。 与此同时，转向其他地方，也不见得好多少。有人以为“民主”的外衣就代表公正与希望，但有时候它甚至成了新的束缚术。比如在 民主进步党 主导下的...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#content-inner">9</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">EvilWisdom2025</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">245</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">15</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://x.com/evilwisdom2025"><i class="fab fa-twitter"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/06/%E6%A0%B8%E6%AD%A6%E5%99%A8%E3%80%81%E6%88%98%E4%BA%89%E5%86%B3%E7%AD%96%E4%B8%8E%E5%9B%BD%E9%99%85%E7%A7%A9%E5%BA%8F%EF%BC%9A%E4%BB%8E%E5%8E%86%E5%8F%B2%E6%A1%88%E4%BE%8B%E5%88%B0%E7%8E%B0%E5%AE%9E%E6%A0%BC%E5%B1%80%E7%9A%84%E5%88%86%E6%9E%90/" title="核武器、战争决策与国际秩序：从历史案例到现实格局的分析">核武器、战争决策与国际秩序：从历史案例到现实格局的分析</a><time datetime="2026-03-06T09:53:48.000Z" title="Created 2026-03-06 17:53:48">2026-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/02/%E6%88%98%E4%BA%89%E3%80%81%E5%8F%8C%E6%A0%87%E4%B8%8E%E5%88%B6%E5%BA%A6%E8%BD%AC%E5%9E%8B%EF%BC%9A%E4%B8%80%E7%A7%8D%E7%BB%93%E6%9E%84%E6%80%A7%E5%88%86%E6%9E%90/" title="战争、双标与制度转型：一种结构性分析">战争、双标与制度转型：一种结构性分析</a><time datetime="2026-03-02T06:04:10.000Z" title="Created 2026-03-02 14:04:10">2026-03-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/02/25/%E5%BD%93%E9%87%91%E7%89%8C%E6%88%90%E4%B8%BA%E9%81%AE%E7%BE%9E%E5%B8%83%EF%BC%9A%E5%AE%8F%E5%A4%A7%E5%8F%99%E4%BA%8B%E3%80%81%E6%B3%95%E5%BE%8B%E5%A4%B1%E8%AF%AD%E4%B8%8E%E5%88%B6%E5%BA%A6%E7%9A%84%E5%8F%8C%E9%87%8D%E6%A0%87%E5%87%86/" title="当金牌成为遮羞布：宏大叙事、法律失语与制度的双重标准">当金牌成为遮羞布：宏大叙事、法律失语与制度的双重标准</a><time datetime="2026-02-25T11:00:19.000Z" title="Created 2026-02-25 19:00:19">2026-02-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/02/04/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%96%E7%95%8C%E6%9C%89%E6%9D%83%E8%AE%A8%E8%AE%BA%E4%BD%A0/" title="为什么世界有权讨论你">为什么世界有权讨论你</a><time datetime="2026-02-04T11:17:53.000Z" title="Created 2026-02-04 19:17:53">2026-02-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/02/04/%E4%BB%8E%E2%80%9C%E6%81%90%E6%80%96%E5%88%86%E5%AD%90%E2%80%9D%E5%88%B0%E2%80%9C%E5%BA%A7%E4%B8%8A%E5%AE%BE%E2%80%9D%EF%BC%9A%E5%8F%99%E5%88%A9%E4%BA%9A%E5%A4%8F%E6%8B%89%E8%A2%AB%E2%80%9C%E6%B4%97%E7%99%BD%E2%80%9D%E7%9A%84%E6%94%BF%E6%B2%BB%E9%80%BB%E8%BE%91/" title="从“恐怖分子”到“座上宾”：叙利亚夏拉被“洗白”的政治逻辑">从“恐怖分子”到“座上宾”：叙利亚夏拉被“洗白”的政治逻辑</a><time datetime="2026-02-04T10:58:38.000Z" title="Created 2026-02-04 18:58:38">2026-02-04</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Politics/"><span class="card-category-list-name">Politics</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%96%E7%95%8C%E5%8E%86%E5%8F%B2/"><span class="card-category-list-name">世界历史</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AD%E5%85%B1/"><span class="card-category-list-name">中共</span><span class="card-category-list-count">12</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2/"><span class="card-category-list-name">中国历史</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AD%E5%9B%BD%E6%94%BF%E6%B2%BB/"><span class="card-category-list-name">中国政治</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%93%B2%E5%AD%A6/"><span class="card-category-list-name">哲学</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%9B%BD%E6%B0%91%E5%85%9A/"><span class="card-category-list-name">国民党</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB/"><span class="card-category-list-name">国际关系</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%A4%E5%B2%B8%E5%85%B3%E7%B3%BB/" style="font-size: 1.3em; color: #99a1ac">两岸关系</a> <a href="/tags/%E5%9F%8E%E5%B8%82%E5%8E%86%E5%8F%B2/" style="font-size: 1.1em; color: #999">城市历史</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E6%94%BF%E6%B2%BB/" style="font-size: 1.1em; color: #999">中国政治</a> <a href="/tags/%E5%9B%BD%E5%AE%B6%E4%B8%BB%E5%B8%AD/" style="font-size: 1.1em; color: #999">国家主席</a> <a href="/tags/%E5%B2%AD%E5%8D%97%E6%96%87%E5%8C%96/" style="font-size: 1.1em; color: #999">岭南文化</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E4%BB%A3%E4%BB%B7/" style="font-size: 1.1em; color: #999">环境代价</a> <a href="/tags/%E5%AD%99%E4%B8%AD%E5%B1%B1/" style="font-size: 1.1em; color: #999">孙中山</a> <a href="/tags/%E4%BE%B5%E7%95%A5/" style="font-size: 1.1em; color: #999">侵略</a> <a href="/tags/%E4%B8%89%E6%9D%83%E5%88%86%E7%AB%8B/" style="font-size: 1.1em; color: #999">三权分立</a> <a href="/tags/%E5%BD%92%E5%B1%9E%E6%84%9F/" style="font-size: 1.1em; color: #999">归属感</a> <a href="/tags/%E7%8E%8B%E5%BF%97%E5%AE%89/" style="font-size: 1.1em; color: #999">王志安</a> <a href="/tags/%E5%9B%BD%E5%AE%B6%E6%9A%B4%E5%8A%9B/" style="font-size: 1.2em; color: #999da3">国家暴力</a> <a href="/tags/Authoritarianism/" style="font-size: 1.1em; color: #999">Authoritarianism</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D/" style="font-size: 1.1em; color: #999">资源分配</a> <a href="/tags/%E6%9D%83%E5%8A%9B%E9%9B%86%E4%B8%AD/" style="font-size: 1.1em; color: #999">权力集中</a> <a href="/tags/%E8%AE%A4%E7%9F%A5%E9%97%AD%E5%90%88/" style="font-size: 1.1em; color: #999">认知闭合</a> <a href="/tags/%E6%B0%91%E6%97%8F%E4%B8%BB%E4%B9%89/" style="font-size: 1.3em; color: #99a1ac">民族主义</a> <a href="/tags/%E5%AE%AA%E6%94%BF/" style="font-size: 1.1em; color: #999">宪政</a> <a href="/tags/%E5%A8%B1%E4%B9%90%E8%87%B3%E6%AD%BB/" style="font-size: 1.1em; color: #999">娱乐至死</a> <a href="/tags/%E6%81%90%E6%83%A7%E6%96%87%E5%8C%96/" style="font-size: 1.1em; color: #999">恐惧文化</a> <a href="/tags/%E7%BE%8E%E5%9B%BD%E5%A4%96%E4%BA%A4/" style="font-size: 1.1em; color: #999">美国外交</a> <a href="/tags/%E9%80%89%E4%B8%BE%E5%88%B6%E5%BA%A6/" style="font-size: 1.1em; color: #999">选举制度</a> <a href="/tags/%E4%B8%AD%E5%A4%AE%E9%9B%86%E6%9D%83/" style="font-size: 1.1em; color: #999">中央集权</a> <a href="/tags/%E5%9B%BD%E5%AE%B6%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89/" style="font-size: 1.4em; color: #99a5b6">国家资本主义</a> <a href="/tags/%E7%96%B2%E6%B0%91%E6%94%BF%E6%B2%BB/" style="font-size: 1.1em; color: #999">疲民政治</a> <a href="/tags/%E5%86%9B%E6%9D%83/" style="font-size: 1.1em; color: #999">军权</a> <a href="/tags/%E8%83%A1%E9%94%A6%E6%B6%9B/" style="font-size: 1.1em; color: #999">胡锦涛</a> <a href="/tags/%E8%AE%AE%E4%BC%9A%E6%94%BF%E6%B2%BB/" style="font-size: 1.1em; color: #999">议会政治</a> <a href="/tags/%E5%8F%B0%E6%B9%BE%E9%97%AE%E9%A2%98/" style="font-size: 1.3em; color: #99a1ac">台湾问题</a> <a href="/tags/%E6%94%BF%E6%B2%BB%E5%AE%A3%E4%BC%A0/" style="font-size: 1.5em; color: #99a9bf">政治宣传</a> <a href="/tags/%E6%9E%81%E6%9D%83%E7%BB%9F%E6%B2%BB/" style="font-size: 1.1em; color: #999">极权统治</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E4%B8%8D%E5%85%AC/" style="font-size: 1.1em; color: #999">社会不公</a> <a href="/tags/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD/" style="font-size: 1.1em; color: #999">中华人民共和国</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E6%AD%A3%E4%B9%89/" style="font-size: 1.1em; color: #999">程序正义</a> <a href="/tags/%E4%B8%AD%E5%85%B1%E4%B8%AD%E5%A4%AE%E6%80%BB%E4%B9%A6%E8%AE%B0/" style="font-size: 1.1em; color: #999">中共中央总书记</a> <a href="/tags/%E7%A4%BE%E4%BC%9A%E8%A7%89%E9%86%92/" style="font-size: 1.1em; color: #999">社会觉醒</a> <a href="/tags/%E7%B2%A4%E8%AF%AD/" style="font-size: 1.1em; color: #999">粤语</a> <a href="/tags/%E6%9D%83%E5%8A%9B%E4%B8%8E%E5%88%B6%E8%A1%A1/" style="font-size: 1.1em; color: #999">权力与制衡</a> <a href="/tags/%E5%8F%91%E5%B1%95%E5%9E%8B%E5%9B%BD%E5%AE%B6/" style="font-size: 1.1em; color: #999">发展型国家</a> <a href="/tags/%E6%99%AE%E4%B8%96%E4%BB%B7%E5%80%BC/" style="font-size: 1.3em; color: #99a1ac">普世价值</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/03/">
+            <span class="card-archive-list-date">
+              March 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/02/">
+            <span class="card-archive-list-date">
+              February 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              January 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              December 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              November 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              October 2025
+            </span>
+            <span class="card-archive-list-count">10</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              September 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/08/">
+            <span class="card-archive-list-date">
+              August 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">83</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-04-07T11:19:51.938Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2026 By EvilWisdom2025</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
